@@ -1,0 +1,8 @@
+.main.posts-new
+  .container
+    %h1.form-heading 編集する
+    .form
+      .form-body
+        = form_with(model: @post, local: true) do |form|
+          = form.text_area :content
+          = form.submit "保存"

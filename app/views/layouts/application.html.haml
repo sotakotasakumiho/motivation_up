@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MotivationUp
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      .header-logo
+        = link_to("FamilyTweet", "/home")
+      %ul.header-menus
+        %li
+          = link_to("FamilyTweetとは", "/home/show.id")
+        %li
+          = link_to("投稿一覧", "/posts")
+        %li
+          = link_to("新規投稿", "/posts/new")
+    = yield

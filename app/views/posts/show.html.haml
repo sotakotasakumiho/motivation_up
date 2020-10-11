@@ -1,0 +1,10 @@
+.main.posts-show
+  .container
+    .posts-show-item
+      %p
+        = @post.content
+      .post-time
+        = @post.created_at
+      .post-menus
+        = link_to("編集", "/posts/#{@post.id}/edit")
+        = link_to("削除", "/posts/#{@post.id}", method: :delete)
