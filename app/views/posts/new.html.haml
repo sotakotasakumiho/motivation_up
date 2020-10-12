@@ -2,6 +2,11 @@
   .container
     %h1.form-heading 投稿する
     = form_with model: @post, local: true do |f|
-      = f.text_area :content, placeholder: :"お話帳", class: :form_text
-      = f.submit "投稿", class: :form_btn
-    = @post.content
+      .form
+        .form-body
+          - @post.errors.full_messages.each do |message|
+            .form-error
+              =message
+          = f.text_area :content, placeholder: :"お話帳", class: :form_text
+          = f.submit "投稿", class: :form_btn
+          = @post.content
