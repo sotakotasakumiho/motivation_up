@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :confirm_user_signed_in?
   def index
     @users = User.all
   end
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :nickname, :image)
+    params.require(:user).permit(:name, :nickname, :image, :email)
   end
 
 end
