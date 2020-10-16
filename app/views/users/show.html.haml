@@ -1,0 +1,12 @@
+.main.user-show
+  .container
+    .user
+      = image_tag @user.image.url, class: 'img' if @user.image.present?
+      %h2 
+        = @user.nickname
+      %P
+        = @user.name
+      = link_to("編集","/users/#{@user.id}/edit")
+      = link_to("削除", "/users/#{@user.id}", method: :delete)
+
+     
