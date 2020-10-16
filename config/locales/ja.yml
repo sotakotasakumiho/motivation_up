@@ -5,3 +5,11 @@ ja:
     attributes:
       post:
         content: 文字
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: なまえ
+        nickname: ニックネーム
+        image: しゃしん
