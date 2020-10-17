@@ -11,17 +11,25 @@
       .header-logo
         = link_to("FamilyTweet", "/home")
       %ul.header-menus
-        %li
-          = link_to("FamilyTweetとは", "/home/show.id")
-        %li
-          = link_to("おはなしをみる", "/posts")
-        %li
-          = link_to("おはなしをする", "/posts/new")
-        %li
-          = link_to("かぞくのなまえ", "/users")
-        %li 
-          = link_to("なまえのとうろく", "/users/new")
-
+        - if session[:user_id]
+          %li
+            現在ログインしているユーザーのid:
+            = session[:user_id]
+          %li
+            = link_to("おはなしをみる", "/posts")
+          %li
+            = link_to("おはなしをする", "/posts/new")
+          %li
+            = link_to("かぞくのなまえ", "/users")
+          %li
+            = link_to("ログアウト", "/logout", {method: :post})
+        - else
+          %li
+            = link_to("FamilyTweetとは", "/home/show.id")
+          %li 
+            = link_to("なまえのとうろく", "/users/new")
+          %li
+            = link_to("ログイン", "/login")
     - if flash[:notice]
       .flash
         = flash[:notice]    
