@@ -6,7 +6,8 @@
         = @user.nickname
       %P
         = @user.name
-      = link_to("編集","/users/#{@user.id}/edit")
-      = link_to("削除", "/users/#{@user.id}", method: :delete)
+      - if @user.id == @current_user.id
+        = link_to("編集","/users/#{@user.id}/edit")
+        = link_to("削除", "/users/#{@user.id}", method: :delete)
 
      
