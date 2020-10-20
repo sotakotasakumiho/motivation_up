@@ -2,4 +2,9 @@
   .container
     - @posts.each do |post|
       .posts-index-item
-        = link_to(post.content, "/posts/#{post.id}")
+        .post-left
+          = image_tag post.user.image.url
+        .post-right
+          .post-user-name
+            = link_to(post.user.nickname, "/users/#{post.user.id}")
+          = link_to(post.content, "/posts/#{post.id}")
