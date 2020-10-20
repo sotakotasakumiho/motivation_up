@@ -24,6 +24,8 @@
           %li
             = link_to("かぞくのなまえ", "/users")
           %li
+            = link_to("お気に入り", "/posts/#{:post_id}/likes")
+          %li
             = link_to("ログアウト", "/logout", {method: :post})
         - else
           %li
