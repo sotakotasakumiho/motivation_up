@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function(){
     loadingHtml: 'now loading',
     autoTrigger: true,
     nextSelector: 'a.next',
-    contentSelector: '.posts-index-item',
+    contentSelector: '.j-scroll',
     padding: 20,
   });
 });
