@@ -4,7 +4,6 @@ class Post < ApplicationRecord
 
 
   has_many :likes, dependent: :destroy
-  has_many :likes, through: :likes, source: :user
   def user
     return User.find_by(id: self.user_id)
   end
