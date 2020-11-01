@@ -164,7 +164,10 @@ header {
   background-position: center 50%;
   background-size: cover;
   background-image: url("/IMG-0972.jpg");
+  background : transparent;
 }
+
+.maim-main
 
 .about-main h2 {
   font-size: 64px;
@@ -178,7 +181,9 @@ header {
   font-size: 20px;
   margin-top: 20px;
 }
-
+.class{
+  display: none;
+}
 
 /* フォーム================================ */
 .form {
