@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: motivation_up_production
-  username: motivation_up
-  password: <%= ENV['MOTIVATION_UP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
