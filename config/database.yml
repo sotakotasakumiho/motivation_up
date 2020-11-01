@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: motivation_up_production
-  username: motivation_up
-  password: <%= ENV['MOTIVATION_UP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
